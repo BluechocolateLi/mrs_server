@@ -8,11 +8,13 @@ package com.swpu.entity;
 import cn.hutool.core.date.DateTime;
 import lombok.Data;
 
+import java.security.Timestamp;
+
 @Data
 public class Score {
     private Long userId;
     private Long movieId;
     private Double score;
-    private DateTime createTime;
-    private DateTime updateTime;
+    private Timestamp createTime;
+    private Timestamp updateTime;
 }

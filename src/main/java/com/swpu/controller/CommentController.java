@@ -5,10 +5,34 @@ package com.swpu.controller;
  * @Description:com.swpu.controller
  */
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.swpu.entity.Comment;
+import com.swpu.service.CommentService;
+import org.springframework.web.bind.annotation.*;
+
+import javax.annotation.Resource;
+import java.util.List;
 
 @RestController
-@RequestMapping("/comment")
+@RequestMapping("/commentController")
 public class CommentController {
+
+    @Resource
+    private CommentService commentService;
+
+    @GetMapping("/getAllComment")
+    public List<Comment> getAllComment(){
+        return commentService.getAllComment();
+    }
+    @GetMapping("/getCommentById/{movieId}")
+    public List<Comment> getCommentById(@PathVariable("movieId") Long movieId){
+        System.out.println("getCommentById");
+        return commentService.getCommentById(movieId);
+    }
+    @PostMapping("/writeComment")
+    public int writeComment(Comment comment){
+        return commentService.writeComment(comment);
+    }
+
+
+
 }

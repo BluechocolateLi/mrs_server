@@ -3,6 +3,8 @@ package com.swpu.entity;
 import cn.hutool.core.date.DateTime;
 import lombok.Data;
 
+import java.security.Timestamp;
+
 @Data
 public class User {
     private Long userId;
@@ -14,7 +16,7 @@ public class User {
     private String types;       // 喜欢的类型
     private String director;    // 喜欢的导演
     private String actor;       // 喜欢的演员
-    private DateTime createTime;
-    private DateTime updateTime;
+    private Timestamp createTime;
+    private Timestamp updateTime;
 
 }

@@ -15,7 +15,7 @@ import javax.annotation.Resource;
 
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/usercontroller")
 public class UserController {
 
 }

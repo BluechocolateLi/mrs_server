@@ -8,12 +8,14 @@ package com.swpu.entity;
 import cn.hutool.core.date.DateTime;
 import lombok.Data;
 
+import java.sql.Timestamp;
+
 @Data
 public class Comment {
 
     private Long userId;
     private Long movieId;
     private String comment;
-    private DateTime createTime;
-    private DateTime updateTime;
+    private Timestamp createTime;
+    private Timestamp updateTime;
 }
